@@ -21,7 +21,10 @@ const PostDetail = () => {
                 ducimus earum eligendi harum natus praesentium
                 quos, recusandae rem reprehenderit saepe unde
                 vitae! Corporis deserunt eaque exercitatione
-                m mollitia numquam rerum similique sunt ullam. Dolor, suscipit voluptatum. Doloremque esse eveniet, excepturi ipsum, libero magni maiores optio rem sit tempore ut voluptatem? Delectus dolorum ex explicabo id nam nihil, ratione sit voluptatem. Ab accusantium beatae commodi itaque laudantium maxime neque nostrum omnis quas quasi, quis, ratione sequi similique ullam veniam veritatis voluptas voluptatum.
+                m mollitia numquam rerum similique sunt ullam. Dolor, suscipit voluptatum. Doloremque esse eveniet,
+                excepturi ipsum, libero magni maiores optio rem sit tempore ut voluptatem? Delectus dolorum ex explicabo
+                id nam nihil, ratione sit voluptatem. Ab accusantium beatae commodi itaque laudantium maxime neque
+                nostrum omnis quas quasi, quis, ratione sequi similique ullam veniam veritatis voluptas voluptatum.
             </p>
             <hr/>
             <span className="post-date">1 hour ago</span>
