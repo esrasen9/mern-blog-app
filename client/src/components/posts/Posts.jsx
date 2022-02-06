@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Posts.css";
-import Post from "./Post";
+import Post from "../post/Post";
 
 const Posts = () => {
     return (
