@@ -1,0 +1,50 @@
+.posts {
+    margin: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.posts-title {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    color: black;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+.posts-title::before, .posts-title::after {
+    content: '';
+    left: 0;
+    display: inline-block;
+    height: 1em;
+    width: 30%;
+    margin: 5px 24px;
+    color: black;
+    border-bottom: 4px solid;
+    border-radius: 4px;
+    opacity: 0.6;
+}
+
+.post {
+    flex-basis: 33%;
+    padding: 40px 20px;
+    margin-bottom: 40px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 600px;
+    background-color: rgba(161, 140, 145, 0.2);
+    border-radius: 8px;
+    line-height: 28px;
+}
+
+.post::-webkit-scrollbar {
+    display: none;
+}
+
+.post-image {
+    width: 100%;
+    object-fit: cover;
+}

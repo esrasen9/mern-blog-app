@@ -1,0 +1,27 @@
+.top-right {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 8px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icon-button {
+    margin: 0 8px;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}

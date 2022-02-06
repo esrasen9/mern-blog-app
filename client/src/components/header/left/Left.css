@@ -1,0 +1,9 @@
+.left {
+    flex: 3;
+    margin-left: 40px;
+}
+
+.left-img {
+    width: 60px;
+    height: 60px;
+}
