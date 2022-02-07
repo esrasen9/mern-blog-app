@@ -8,7 +8,7 @@ function App() {
         <div className="app">
             <Header/>
             <Routes>
-                <Route exact path="/" element={<Home/>}/>*/}
+                <Route exact path="/" element={<Home/>}/>
             </Routes>
         </div>
     );
