@@ -1,14 +1,16 @@
 import './App.css';
 import {Routes, Route} from "react-router-dom";
 import Header from "./components/header/Header";
-import Home from "./pages/Home";
+import {pages} from "./pages";
 
 function App() {
     return (
         <div className="app">
             <Header/>
             <Routes>
-                <Route exact path="/" element={<Home/>}/>
+                {
+                    pages.map((page) => (<Route exact path={page.path} element={page.element}/>) )
+                }
             </Routes>
         </div>
     );
