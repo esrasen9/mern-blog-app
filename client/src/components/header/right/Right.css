@@ -1,9 +1,9 @@
 .top-right {
     flex: 3;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
     margin-right: 40px;
+    align-items: center;
 }
 
 .profile-pic {
@@ -20,7 +20,7 @@
 }
 
 .icon-button {
-    margin: 0 8px;
+    margin: 0 4px;
     background-color: transparent;
     border: 0;
     cursor: pointer;
