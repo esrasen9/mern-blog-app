@@ -19,9 +19,13 @@
     align-items: center;
 }
 
-.icon-button {
+.search-button {
     margin: 0 4px;
     background-color: transparent;
     border: 0;
     cursor: pointer;
+}
+
+.sign-link {
+    color: #2A3346;
 }

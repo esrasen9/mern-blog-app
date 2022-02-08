@@ -1,6 +1,7 @@
 import Home from "./pages/Home";
 import Write from "./pages/Write";
 import ProfileSettings from "./pages/ProfileSettings";
+import Sign from "./pages/Sign";
 
 export const pages = [
     {
@@ -14,5 +15,9 @@ export const pages = [
     {
         path: "/settings",
         element: <ProfileSettings/>
+    },
+    {
+        path: "/sign",
+        element: <Sign/>
     }
 ]
