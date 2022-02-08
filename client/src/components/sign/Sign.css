@@ -28,6 +28,7 @@
     background-color: transparent;
     text-transform: uppercase;
     color: white;
+    cursor: pointer;
 }
 
 .point {
@@ -76,7 +77,7 @@
 
 .sign-button {
     font-size: 1.3rem;
-    width: 220px;
+    width: 200px;
     font-weight: bold;
     margin: 60px 0;
     color: white;
