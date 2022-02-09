@@ -1,0 +1,36 @@
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 100px 60px;
+    height: 70vh;
+}
+
+.about-content {
+    width: 600px;
+    color: teal;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-title {
+    font-size: 6rem;
+    margin-bottom: 40px;
+}
+
+.about-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-style: italic;
+    color: rgba(0, 52, 52, 0.6);
+}
+
+.about-ill {
+    width: 600px;
+    height: 40vh;
+    margin-right: 50px;
+}

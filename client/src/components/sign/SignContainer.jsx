@@ -7,7 +7,9 @@ const SignContainer = () => {
     const [isSignUp, setIsSignUp] = useState(true);
     return (
         <div className="sign-form-container">
-            <img className="sign-form-img" src={signImg} alt=""/>
+            <div className="sign-form-left">
+                <img className="sign-form-img" src={signImg} alt=""/>
+            </div>
             <SignFormRight isSignUp={isSignUp} setIsSignUp={setIsSignUp}/>
         </div>
     );

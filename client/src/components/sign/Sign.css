@@ -1,6 +1,6 @@
 .sign-form-container {
     display: flex;
-    width: 75vw;
+    width: 68vw;
     height: 70vh;
     justify-content: space-around;
     margin: 30px auto;
@@ -8,9 +8,13 @@
     box-shadow: rgba(0, 0, 0, 0.2) 0 3px 15px;
 }
 
+.sign-form-left {
+    flex: 6;
+}
+
 .sign-form-right {
     display: flex;
-    flex: 9;
+    flex: 6;
     flex-direction: column;
 }
 
@@ -41,8 +45,9 @@
 }
 
 .sign-form-img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    overflow: hidden;
 }
 
 .login-form {
