@@ -5,14 +5,14 @@ const Icons = () => {
     return (
         <div className="icons">
             <button className="search-button">
-                <BiSearch size={34}/>
+                <BiSearch size={50}/>
             </button>
             {/*
             <button className="icon-button">
                 <BiLogOut size={34}/>
             <*/}
             <Link className="sign-link" to="/sign">
-                <BiLogIn size={34}/>
+                <BiLogIn size={50}/>
             </Link>
         </div>
     );

@@ -8,7 +8,6 @@ const MenuItems = () => {
             <NavLink exact activeClassName="active" className="menu-item" to={"/"}>Home</NavLink>
             <NavLink activeClassName="active" className="menu-item" to={"/write"}>Write</NavLink>
             <NavLink activeClassName="active" className="menu-item" to={"/about"}>About</NavLink>
-            <NavLink activeClassName="active" className="menu-item" to={"/contact"}>Contact</NavLink>
         </div>
     );
 }
