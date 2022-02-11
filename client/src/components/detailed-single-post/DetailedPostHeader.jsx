@@ -1,10 +1,10 @@
 import React from 'react';
 import PostControlButtons from "./PostControlButtons";
 
-const DetailedPostHeader = () => {
+const DetailedPostHeader = ({title}) => {
     return (
         <div className="detailed-post-header">
-            <h1 className="detailed-post-title">My Post</h1>
+            <h1 className="detailed-post-title">{title}</h1>
             <PostControlButtons/>
         </div>
     );

@@ -5,6 +5,7 @@
     justify-content: space-between;
     width: 90%;
     margin: 0 auto;
+    text-transform: capitalize;
 }
 
 .detailed-post > * {
@@ -34,14 +35,21 @@
     background-color: transparent;
 }
 
-.post-author {
-    align-self: flex-start;
+.post-sub-title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-author, .post-date {
+    margin-top: 10px;
     margin-bottom: 30px;
     font-weight: 600;
     opacity: 0.5;
 }
 
 .detailed-post-text {
+    align-self: flex-start;
     text-align: justify;
     font-size: 1.3rem;
     font-weight: 500;

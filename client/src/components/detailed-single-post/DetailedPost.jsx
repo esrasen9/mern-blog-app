@@ -1,51 +1,26 @@
-import React from 'react';
-import fakeImg from "../../img/pexels-photo-5052851.jpeg";
+import React, {useEffect, useState} from 'react';
 import "./DetailedPost.css";
 import DetailedPostHeader from "./DetailedPostHeader";
+import {useParams} from "react-router-dom";
+import axios from "axios";
 
 const DetailedPost = () => {
+    const [post, setPost] = useState({});
+    const {id} = useParams();
+    const {description, postImage, title, username, createdAt} = post;
+    useEffect(() => {
+        axios.get(`/posts/${id}`)
+            .then((response) => setPost(response.data));
+    }, []);
     return (
         <div className="detailed-post">
-            <img className="detailed-post-image" src={fakeImg} alt=""/>
-            <DetailedPostHeader/>
-            <span className="post-author">Author: Lorem</span>
-            <p className="detailed-post-text">
-                Lorem ipsum dolor sit amet,
-                consectetur adipisicing elit.
-                Aliquam atque debitis dolore ipsa l
-                ibero maxime nihil quam qui quis rem!
-                Aperiam doloribus labore sapiente.
-                Animi blanditiis cum debitis doloribus
-                ducimus earum eligendi harum natus praesentium
-                quos, recusandae rem reprehenderit saepe unde
-                vitae! Corporis deserunt eaque exercitatione
-                m mollitia numquam rerum similique sunt ullam. Dolor, suscipit voluptatum. Doloremque esse eveniet,
-                excepturi ipsum, libero magni maiores optio rem sit tempore ut voluptatem? Delectus dolorum ex explicabo
-                id nam nihil, ratione sit voluptatem. Ab accusantium beatae commodi itaque laudantium maxime neque
-                nostrum omnis quas quasi, quis, rat
-                Aliquam atque debitis dolore ipsa l
-                ibero maxime nihil quam qui quis rem!
-                Aperiam doloribus labore sapiente.
-                Animi blanditiis cum debitis doloribus
-                ducimus earum eligendi harum natus praesentium
-                quos, recusandae rem reprehenderit saepe unde
-                vitae! Corporis deserunt eaque exercitatione
-                m mollitia numquam rerum similique sunt ullam. Dolor, suscipit voluptatum. Doloremque esse eveniet,
-                excepturi ipsum, libero magni maiores optio rem sit tempore ut voluptatem? Delectus dolorum ex explicabo
-                id nam nihil, ratione sit voluptatem. Ab accusantium beatae commodi itaque laudantium maxime neque
-                nostrum omnis quas quasi, quis, ratione
-                Aliquam atque debitis dolore ipsa l
-                ibero maxime nihil quam qui quis rem!
-                Aperiam doloribus labore sapiente.
-                Animi blanditiis cum debitis doloribus
-                ducimus earum eligendi harum natus praesentium
-                quos, recusandae rem reprehenderit saepe unde
-                vitae! Corporis deserunt eaque exercitatione
-                m mollitia numquam rerum similique sunt ullam. Dolor, suscipit voluptatum. Doloremque esse eveniet,
-                excepturi ipsum, libero magni maiores optio rem sit tempore ut voluptatem? Delectus dolorum ex explicabo
-                id nam nihil, ratione sit voluptatem. Ab accusantium beatae commodi itaque laudantium maxime neque
-                nostrum omnis quas quasi, quis, rationeione sequi similique ullam veniam veritatis voluptas voluptatum.
-            </p>
+            {postImage && <img className="detailed-post-image" src={postImage} alt=""/>}
+            <DetailedPostHeader title={title}/>
+            <div className="post-sub-title">
+                <span className="post-author">Author: {username}</span>
+                <span className="post-date">{new Date(createdAt).toDateString()}</span>
+            </div>
+            <p className="detailed-post-text">{description}</p>
         </div>
     );
 }
