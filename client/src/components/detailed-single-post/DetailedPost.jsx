@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import "./DetailedPost.css";
 import DetailedPostHeader from "./DetailedPostHeader";
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import axios from "axios";
 
 const DetailedPost = () => {
@@ -17,7 +17,9 @@ const DetailedPost = () => {
             {postImage && <img className="detailed-post-image" src={postImage} alt=""/>}
             <DetailedPostHeader title={title}/>
             <div className="post-sub-title">
-                <span className="post-author">Author: {username}</span>
+                <Link className="user-posts-link" to={`/?username=${username}`}>
+                    <span className="post-author">Author: {username}</span>
+                </Link>
                 <span className="post-date">{new Date(createdAt).toDateString()}</span>
             </div>
             <p className="detailed-post-text">{description}</p>

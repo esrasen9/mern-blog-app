@@ -61,3 +61,8 @@
     font-weight: bolder;
     font-size: 1.7rem;
 }
+
+.user-posts-link {
+    text-decoration: none;
+    color: inherit;
+}
