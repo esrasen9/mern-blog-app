@@ -3,6 +3,7 @@ import React from 'react';
 import {Routes, Route} from "react-router-dom";
 import Header from "./components/header/Header";
 import {pages} from "./pages";
+import uuid from 'react-uuid'
 
 function App() {
     return (
@@ -10,7 +11,7 @@ function App() {
             <Header/>
             <Routes>
                 {
-                    pages.map((page) => (<Route exact path={page.path} element={page.element}/>) )
+                    pages.map((page) => (<Route key={uuid()} exact="true" path={page.path} element={page.element}/>) )
                 }
             </Routes>
         </div>
