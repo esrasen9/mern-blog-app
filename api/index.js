@@ -7,8 +7,11 @@ const userRouter = require("./routes/users");
 const postRouter = require("./routes/posts");
 const categoryRouter = require("./routes/categories");
 const multer = require("multer");
+const cors = require('cors')
+
 dotenv.config();
 app.use(express.json());
+app.use(cors());
 
 mongoose.connect(process.env.MONGO_CONNECTION_URL, {
     useNewUrlParser: true,
@@ -21,18 +24,18 @@ mongoose.connect(process.env.MONGO_CONNECTION_URL, {
 
 
 const storage = multer.diskStorage({
-  destination: (req, file, callback) => {
-    callback(null, "images");
-  },
-  filename: (req, file, callback) => {
-    callback(null,"newFile.jpeg");
-    //req.body.fileName
-  }
+    destination: (req, file, callback) => {
+        callback(null, "images");
+    },
+    filename: (req, file, callback) => {
+        callback(null, "newFile.jpeg");
+        //req.body.fileName
+    }
 });
 
 const upload = multer({storage});
-app.post("/api/upload",upload.single("file"),(req, res)=>{
-  res.status(200).json("File has been uploaded successfully.");
+app.post("/api/upload", upload.single("file"), (req, res) => {
+    res.status(200).json("File has been uploaded successfully.");
 });
 
 app.use("/api/auth", authRouter);

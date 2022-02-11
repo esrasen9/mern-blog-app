@@ -1,13 +1,14 @@
 import React from 'react';
-import fakeImg from "../../img/pexels-photo-5052851.jpeg"
+import defaultImage from "../../img/defaultPost.jpeg"
 import PostDetail from "./PostDetail";
 import "./Post.css";
 
-const Post = () => {
+const Post = ({post}) => {
+    const {postImage} = post;
     return (
         <div className="post">
-            <img className="post-image" src={fakeImg} alt=""/>
-            <PostDetail/>
+            <img className="post-image" src={postImage || defaultImage} alt=""/>
+            <PostDetail post={post}/>
         </div>
     );
 }

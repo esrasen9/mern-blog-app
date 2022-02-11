@@ -35,8 +35,9 @@
     margin: 5px 0;
 }
 
-.post-category-info span {
+.post-category {
     margin: 0 6px 0 0;
+    text-transform: capitalize;
 }
 
 .post-title {
