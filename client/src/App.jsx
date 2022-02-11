@@ -12,9 +12,9 @@ function App() {
             <Header/>
             <Routes>
                 {
-                    pages.map((page) => (<Route key={uuid()} exact="true" path={page.path} element={page.element}/>) )
+                    pages.map((page) => (<Route key={uuid()} exact="true" path={page.path} element={page.element}/>))
                 }
-                <Route path="/posts/:id"  element={<DetailedPost/>}/>
+                <Route path="/posts/:id" element={<DetailedPost/>}/>
             </Routes>
         </div>
     );
