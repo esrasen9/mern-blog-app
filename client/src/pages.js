@@ -3,6 +3,8 @@ import Write from "./pages/Write";
 import ProfileSettings from "./pages/ProfileSettings";
 import Sign from "./pages/Sign";
 import About from "./components/about/About";
+import MyPosts from "./pages/MyPosts";
+
 export const pages = [
     {
         path: "/",
@@ -23,5 +25,9 @@ export const pages = [
     {
         path: "/about",
         element: <About/>
+    },
+    {
+        path: "/myposts",
+        element: <MyPosts/>
     }
 ]
