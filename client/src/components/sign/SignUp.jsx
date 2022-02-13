@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 import {BsFillCaretRightFill} from "react-icons/bs";
 import FormLabel from "./FormLabel";
 import {HiLockClosed, HiUserCircle} from "react-icons/hi";
@@ -9,15 +10,19 @@ import axios from "axios";
 const SignUp = () => {
     const {username,setUsername,setUser,email,setEmail,password,setPassword} = useStateValue();
     const [error, setError] = useState(false);
+    const navigate = useNavigate();
+
     const handleSignUp = (e) => {
         e.preventDefault();
+        setError(false);
         axios.post("/auth/signup",{
             username,
             email,
             password
         })
         .then((res) => setUser(res.data))
-        .catch((err) => setError(err));
+        .then(() => navigate("/myposts"))
+        .catch(() => setError(true));
     }
     return (
         <form className="login-form" onSubmit={handleSignUp}>
