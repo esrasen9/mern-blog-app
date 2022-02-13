@@ -29,3 +29,9 @@
 .sign-link {
     color: #2A3346;
 }
+
+.icon-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
