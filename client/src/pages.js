@@ -4,6 +4,7 @@ import ProfileSettings from "./pages/ProfileSettings";
 import Sign from "./pages/Sign";
 import About from "./components/about/About";
 import MyPosts from "./pages/MyPosts";
+import DetailedPost from "./components/detailed-single-post/DetailedPost";
 
 export const pages = [
     {
@@ -29,5 +30,9 @@ export const pages = [
     {
         path: "/myposts",
         element: <MyPosts/>
+    },
+    {
+        path:"/posts/:id",
+        element: <DetailedPost />
     }
 ]

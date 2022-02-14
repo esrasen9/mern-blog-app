@@ -1,10 +1,10 @@
-import React, {useContext, useMemo, useState} from 'react';
+import React, {useContext, useEffect, useMemo, useState} from 'react';
 
 export const Context = React.createContext(null);
 
 const Provider = ({ children })=> {
     const [posts, setPosts] = useState([]);
-    const [user, setUser] = useState(null);
+    const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")) || null)
 
     const store = useMemo(() => ({
         posts,
@@ -12,6 +12,10 @@ const Provider = ({ children })=> {
         user,
         setUser
     }),[posts, user]);
+
+    useEffect(() => {
+        localStorage.setItem('user',JSON.stringify(user));
+    },[user]);
 
     return (
         <Context.Provider value={store}>
