@@ -1,13 +1,19 @@
-import React from 'react';
-import fakeImg from "../../../img/pexels-photo-5052851.jpeg";
+import React, {useEffect} from 'react';
 import {CgProfile} from "react-icons/cg";
 import {FaUserMinus} from "react-icons/fa";
 import "./ProfilePicInput.css";
+import {useStateValue} from "../../../Context";
+import avatarPp from "../../../img/pngtree-vector-avatar-icon-png-image_313572.jpeg";
 
 const ProfilePicInput = () => {
+    const {profilePic, setProfilePic, user} = useStateValue();
+    useEffect(() =>{
+        setProfilePic(user.profilePicture)
+    },[setProfilePic, user]);
+
     return (
         <div className="pp-settings">
-            <img src={fakeImg} className="pp-image" alt=""/>
+            <img src={profilePic || avatarPp} className="pp-image" alt=""/>
             <div className="pp-setting-buttons">
                 <label className="pp-label" htmlFor="pp-input">
                     Change Picture

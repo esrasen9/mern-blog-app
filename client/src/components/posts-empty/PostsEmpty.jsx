@@ -1,9 +1,9 @@
 import React from 'react';
 import postNotFoundImg from "../../img/undraw_wall_post_re_y78d.svg";
-import "./PostsNotFound.css";
+import "./PostsEmpty.css";
 import {useNavigate} from "react-router-dom";
 
-const PostsNotFound = () => {
+const PostsEmpty = () => {
     const navigate = useNavigate();
     return (
         <div className="no-post-container">
@@ -18,4 +18,4 @@ const PostsNotFound = () => {
     );
 }
 
-export default PostsNotFound;
+export default PostsEmpty;

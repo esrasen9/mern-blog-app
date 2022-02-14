@@ -1,11 +1,16 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import "./Right.css";
 import Icons from "./Icons";
 import {Link} from "react-router-dom";
 import {useStateValue} from "../../../Context";
-
+import defaultPp from "../../../img/avatar.png";
 const Right = () => {
-    const {user} = useStateValue();
+    const {profilePic,setProfilePic, user} = useStateValue();
+
+    useEffect(() =>{
+        setProfilePic(user?.profilePicture)
+    },[setProfilePic,user]);
+
     return (
         <div className="top-right">
             {
@@ -13,7 +18,7 @@ const Right = () => {
                     <Link to={"/myposts"}>
                         <img
                             className="profile-pic"
-                            src="https://images.pexels.com/photos/10718776/pexels-photo-10718776.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                            src={profilePic || defaultPp}
                             alt="avatar"/>
                     </Link>
                 )

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import {useStateValue} from "../Context";
-import PostsNotFound from "../components/posts-not-found/PostsNotFound";
+import PostsEmpty from "../components/posts-empty/PostsEmpty";
 import MyPostsContainer from "../components/my-posts/MyPostsContainer";
 import {useNavigate} from "react-router-dom";
 
@@ -16,11 +16,11 @@ const MyPosts = () => {
                 .catch((err) => console.error(err));
         }
         return user ? getPosts() : navigate("/");
-    },[myPosts]);
+    },[myPosts, navigate, user]);
     return (
         <div>
             {
-                myPosts.length > 0 ? <MyPostsContainer posts={myPosts}/> : <PostsNotFound/>
+                myPosts.length > 0 ? <MyPostsContainer posts={myPosts}/> : <PostsEmpty/>
             }
         </div>
     );

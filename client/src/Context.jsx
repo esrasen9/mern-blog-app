@@ -5,16 +5,19 @@ export const Context = React.createContext(null);
 const Provider = ({ children })=> {
     const [posts, setPosts] = useState([]);
     const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")) || null)
-
+    const [profilePic, setProfilePic] = useState(null);
     const store = useMemo(() => ({
         posts,
         setPosts,
         user,
-        setUser
-    }),[posts, user]);
+        setUser,
+        profilePic,
+        setProfilePic
+    }),[posts, user, profilePic]);
 
     useEffect(() => {
         localStorage.setItem('user',JSON.stringify(user));
+        setProfilePic(user?.profilePic);
     },[user]);
 
     return (

@@ -22,7 +22,7 @@ const SignUp = () => {
             password: e.target.password.value
         })
             .then((res) => setUser(res.data))
-            .then(() => navigate("/myposts"))
+            .then(() => navigate("/settings"))
             .catch(() => setError(true));
     }
     return (
