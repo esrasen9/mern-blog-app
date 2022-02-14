@@ -1,5 +1,4 @@
 .top-right {
-    flex: 5;
     display: flex;
     justify-content: flex-end;
     margin-right: 56px;

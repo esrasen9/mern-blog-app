@@ -4,7 +4,7 @@ export const Context = React.createContext(null);
 
 const Provider = ({ children })=> {
     const [posts, setPosts] = useState([]);
-    const [user, setUser] = useState({});
+    const [user, setUser] = useState(null);
 
     const store = useMemo(() => ({
         posts,
