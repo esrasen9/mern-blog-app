@@ -5,28 +5,29 @@ import {HiLockClosed, HiUserCircle} from "react-icons/hi";
 import {useStateValue} from "../../Context";
 import {useNavigate} from 'react-router-dom';
 import axios from "axios";
+import {AiOutlineWarning} from "react-icons/ai";
 
 const SignIn = () => {
-    const {username,setUsername, password,setPassword,setUser} = useStateValue();
+    const {setUser} = useStateValue();
     const navigate = useNavigate();
     const [error, setError] = useState(false);
 
     const handleSignIn = (e) => {
         e.preventDefault();
-        setError(false);
-        axios.post("/auth/signin",{
-            username,
-            password
+        axios.post("/auth/signin", {
+            username: e.target.username.value,
+            password: e.target.password.value
         })
             .then((res) => setUser(res.data))
-            .then(()=> navigate("/myposts"))
+            .then(() => navigate("/myposts"))
             .catch(() => setError(true))
     }
 
     return (
-        <form className="login-form" onSubmit={handleSignIn}>
-            <FormLabel setMethod={setUsername} type={"text"} name={"username"} Icon={HiUserCircle}/>
-            <FormLabel setMethod={setPassword} type={"password"} name={"password"} Icon={HiLockClosed}/>
+        <form className="login-form" onSubmit={(e) => handleSignIn(e)}>
+            <FormLabel type={"text"} name={"username"} Icon={HiUserCircle}/>
+            <FormLabel type={"password"} name={"password"} Icon={HiLockClosed}/>
+            {error && <p className="error-message">Something went wrong! <AiOutlineWarning className={"warn-icon"}/></p>}
             <button className="sign-button">Login Now <BsFillCaretRightFill size={25}/></button>
         </form>
     );

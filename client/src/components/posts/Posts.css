@@ -1,3 +1,8 @@
+.posts-container {
+    display: flex;
+    flex-direction: column;
+}
+
 .posts {
     margin: 40px;
     display: flex;

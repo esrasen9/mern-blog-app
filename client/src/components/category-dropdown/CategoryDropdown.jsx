@@ -2,8 +2,10 @@ import React, {useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
 import axios from "axios";
 import uuid from "react-uuid";
+import "./Dropdown.css";
+import {MdOutlineCategory} from "react-icons/md";
 
-const CategoryDropDown = () => {
+const CategoryDropdown = () => {
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
@@ -13,12 +15,12 @@ const CategoryDropDown = () => {
 
     return (
         <div className="dropdown">
-            <button className="drop-button menu-item">Categories</button>
+            <button className="drop-button menu-item">Categories <MdOutlineCategory size={40}/></button>
             <div className="dropdown-content">
                 <Link className="category-link" to={`/`}>All</Link>
                 {
                     categories.map((category) => (
-                        <Link key={uuid()} className="category-link" to={`?category=${category.name}`}>
+                        <Link key={uuid()} className="category-link" to={`/?category=${category.name}`}>
                             {category.name}
                         </Link>))
                 }
@@ -27,4 +29,4 @@ const CategoryDropDown = () => {
     );
 }
 
-export default CategoryDropDown;
+export default CategoryDropdown;

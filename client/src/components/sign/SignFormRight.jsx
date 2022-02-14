@@ -8,7 +8,7 @@ const SignFormRight = ({isSignUp, setIsSignUp}) => {
         <div className="sign-form-right">
             <SignHeader isSignUp={isSignUp} setIsSignUp={setIsSignUp}/>
             {
-                isSignUp ?  <SignUp/> : <SignIn/>
+                isSignUp ? <SignUp/> : <SignIn/>
             }
         </div>
     );

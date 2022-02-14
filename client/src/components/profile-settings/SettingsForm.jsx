@@ -11,9 +11,9 @@ const SettingsForm = () => {
             <div className="settings-form-right">
                 <h1>Profile Settings</h1>
                 <div className="setting-inputs">
-                    <SettingInput inputName="username" type="text" />
-                    <SettingInput inputName="email" type="email" />
-                    <SettingInput inputName="password" type="password" />
+                    <SettingInput inputName="username" type="text"/>
+                    <SettingInput inputName="email" type="email"/>
+                    <SettingInput inputName="password" type="password"/>
                 </div>
                 <button className="update-button">Update Profile</button>
             </div>

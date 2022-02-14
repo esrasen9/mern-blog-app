@@ -12,9 +12,9 @@ const PostDetail = ({post}) => {
                 </Link>
                 <div className="post-category-info">
                     {
-                        categories?.map((category,index) => (<span key={uuid()} className="post-category">
+                        categories?.map((category, index) => (<span key={uuid()} className="post-category">
                             {category}
-                            {index !== categories.length-1 && " |"}
+                            {index !== categories.length - 1 && " |"}
                         </span>))
                     }
                 </div>

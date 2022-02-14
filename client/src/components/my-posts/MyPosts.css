@@ -5,13 +5,14 @@
     justify-content: center;
     flex-wrap: wrap;
 }
+
 .my-posts {
     display: flex;
     flex-wrap: wrap;
 }
 
 .my-posts-title {
-    width: 300px;
+    width: 340px;
     color: #2A3346;
     opacity: 0.8;
     font-style: italic;

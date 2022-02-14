@@ -3,13 +3,13 @@
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding: 100px 60px;
+    padding: 40px 60px 80px 60px;
     height: 70vh;
 }
 
 .about-content {
     width: 600px;
-    color: teal;
+    color: rgba(42, 51, 70, 0.8);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -26,7 +26,6 @@
     font-size: 1.5rem;
     font-weight: 700;
     font-style: italic;
-    color: rgba(0, 52, 52, 0.6);
 }
 
 .about-ill {

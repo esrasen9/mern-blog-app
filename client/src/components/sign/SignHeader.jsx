@@ -10,12 +10,14 @@ const SignHeader = ({isSignUp, setIsSignUp}) => {
         <div className="sign-form-header">
             <div>
                 <button onClick={handleClick}
-                        className="sign-header-button">Sign In</button>
+                        className="sign-header-button">Sign In
+                </button>
                 {!isSignUp && <p className="point">&#9650;</p>}
             </div>
             <div>
                 <button onClick={handleClick}
-                        className="sign-header-button">Sign Up</button>
+                        className="sign-header-button">Sign Up
+                </button>
                 {isSignUp && <p className="point">&#9650;</p>}
             </div>
         </div>

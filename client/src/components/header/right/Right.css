@@ -1,5 +1,5 @@
 .top-right {
-    flex: 3;
+    flex: 5;
     display: flex;
     justify-content: flex-end;
     margin-right: 56px;
@@ -11,7 +11,7 @@
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
-    margin-right: 8px;
+    margin-right: 10px;
 }
 
 .icons {
@@ -26,12 +26,18 @@
     cursor: pointer;
 }
 
-.sign-link {
-    color: #2A3346;
-}
-
 .icon-button {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    color: #2A3346;
+    margin: 0 10px;
+}
+
+.link {
+    color: inherit;
+}
+
+.logout-link {
+    color: crimson;
 }

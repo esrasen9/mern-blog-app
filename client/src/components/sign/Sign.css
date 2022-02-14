@@ -103,4 +103,15 @@
 
 .error-message {
     color: red;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.2rem;
+    background-color: #E9D1D2;
+    padding: 15px 40px 15px 20px;
+    border-radius: 8px;
+}
+
+.warn-icon {
+    margin-left: 10px;
 }

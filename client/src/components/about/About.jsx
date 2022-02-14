@@ -2,6 +2,7 @@ import React from 'react';
 import AboutIll from "../../img/undraw_content_team_3epn.svg";
 import "./About.css";
 import {text} from "./about-text";
+
 const About = () => {
     return (
         <div className="about-container">

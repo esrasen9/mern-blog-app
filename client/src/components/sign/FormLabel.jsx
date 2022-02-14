@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FormLabel = ({type,name,Icon,setMethod}) => {
+const FormLabel = ({type, name, Icon}) => {
     return (
         <div className="form-label">
             <Icon size={30}/>
@@ -8,7 +8,6 @@ const FormLabel = ({type,name,Icon,setMethod}) => {
                    type={type}
                    name={name}
                    placeholder={name}
-                   onChange={(e)=>setMethod(e.target.value)}
             />
         </div>
     );
