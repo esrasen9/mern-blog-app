@@ -16,7 +16,7 @@ const MyPosts = () => {
                 .catch((err) => console.error(err));
         }
         return user ? getPosts() : navigate("/");
-    },[myPosts, navigate, user]);
+    },[myPosts, user]);
     return (
         <div>
             {

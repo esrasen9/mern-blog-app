@@ -15,7 +15,7 @@ const SettingsForm = () => {
                     <SettingInput inputName="email" type="email"/>
                     <SettingInput inputName="password" type="password"/>
                 </div>
-                <button className="update-button">Update Profile</button>
+                <button type="submit" className="update-button">Update Profile</button>
             </div>
         </form>
     );

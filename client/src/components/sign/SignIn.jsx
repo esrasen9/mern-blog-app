@@ -28,7 +28,7 @@ const SignIn = () => {
             <FormLabel type={"text"} name={"username"} Icon={HiUserCircle}/>
             <FormLabel type={"password"} name={"password"} Icon={HiLockClosed}/>
             {error && <p className="error-message">Something went wrong! <AiOutlineWarning className={"warn-icon"}/></p>}
-            <button className="sign-button">Login Now <BsFillCaretRightFill size={25}/></button>
+            <button type="submit" className="sign-button">Login Now <BsFillCaretRightFill size={25}/></button>
         </form>
     );
 }

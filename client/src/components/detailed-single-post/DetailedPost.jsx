@@ -8,6 +8,7 @@ const DetailedPost = () => {
     const [post, setPost] = useState({});
     const {id} = useParams();
     const {description, postImage, title, username, createdAt} = post;
+
     useEffect(() => {
         axios.get(`/posts/${id}`)
             .then((response) => setPost(response.data));

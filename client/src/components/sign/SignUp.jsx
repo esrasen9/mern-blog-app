@@ -31,7 +31,7 @@ const SignUp = () => {
             <FormLabel type={"email"} name={"email"} Icon={MdEmail}/>
             <FormLabel type={"password"} name={"password"} Icon={HiLockClosed}/>
             {error && <p className="error-message">Something went wrong! <AiOutlineWarning className="warn-icon"/></p>}
-            <button className="sign-button">Sign Up <BsFillCaretRightFill className={"warn-icon"} size={25}/></button>
+            <button type="submit" className="sign-button">Sign Up <BsFillCaretRightFill className={"warn-icon"} size={25}/></button>
         </form>
     );
 }

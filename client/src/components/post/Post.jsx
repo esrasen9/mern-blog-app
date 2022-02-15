@@ -5,6 +5,7 @@ import "./Post.css";
 
 const Post = ({post}) => {
     const {postImage} = post;
+
     return (
         <div className="post">
             <img className="post-image" src={postImage || defaultImage} alt=""/>
