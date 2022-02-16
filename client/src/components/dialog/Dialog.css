@@ -1,0 +1,50 @@
+.dialog-container {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    font-size: 1.8rem;
+}
+
+.dialog-box {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 12px;
+}
+
+.dialog-buttons {
+    margin-top: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn {
+    font-size: 1.4rem;
+    padding: 6px 24px;
+    border-radius: 10px;
+    border: 0;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-yes {
+    background-color: red;
+}
+.btn-no {
+    background-color: green;
+}

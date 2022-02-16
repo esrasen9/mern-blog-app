@@ -6,14 +6,18 @@ const Provider = ({ children })=> {
     const [posts, setPosts] = useState([]);
     const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")) || null)
     const [profilePic, setProfilePic] = useState(null);
+    const [dialogIsOpen, setDialogIsOpen] = useState(false);
+
     const store = useMemo(() => ({
         posts,
         setPosts,
         user,
         setUser,
         profilePic,
-        setProfilePic
-    }),[posts, user, profilePic]);
+        setProfilePic,
+        dialogIsOpen,
+        setDialogIsOpen
+    }),[posts, user, profilePic, dialogIsOpen]);
 
     useEffect(() => {
         localStorage.setItem('user',JSON.stringify(user));
