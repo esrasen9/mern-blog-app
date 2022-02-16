@@ -6,7 +6,6 @@ const authRouter = require("./routes/auth");
 const userRouter = require("./routes/users");
 const postRouter = require("./routes/posts");
 const uploadRouter = require("./routes/upload");
-const categoryRouter = require("./routes/categories");
 const cors = require('cors')
 const bodyParser = require('body-parser');
 
@@ -28,7 +27,6 @@ mongoose.connect(process.env.MONGO_CONNECTION_URL, {
 app.use("/api/auth", authRouter);
 app.use("/api/users", userRouter);
 app.use("/api/posts", postRouter);
-app.use("/api/categories", categoryRouter);
 app.use("/api/upload", uploadRouter)
 
 app.listen(process.env.PORT, () => {

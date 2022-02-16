@@ -8,7 +8,7 @@ const Post = ({post}) => {
     const imgSrc = `http://localhost:5001/${postImage}`
     return (
         <div className="post">
-            <img className="post-image" src={imgSrc || defaultImage} alt=""/>
+            <img className="post-image" src={ postImage ? imgSrc : defaultImage} alt=""/>
             <PostDetail post={post}/>
         </div>
     );

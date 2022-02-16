@@ -1,7 +1,6 @@
 import React from 'react';
 import "./NewPost.css";
 import NewPostForm from "./NewPostForm";
-import fakeImg from "../../img/pexels-photo-547125.jpeg";
 
 const NewPost = () => {
     return (

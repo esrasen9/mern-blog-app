@@ -24,11 +24,12 @@
     margin-bottom: 6px;
 }
 
-.new-post-title {
+.new-post-title,.new-post-categories {
     font-size: 1.4rem;
     flex-basis: 96%;
     padding: 10px;
     margin: 0 6px 6px 0;
+    outline: none;
 }
 
 .new-post-form {
