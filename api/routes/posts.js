@@ -2,7 +2,7 @@ const router = require('express').Router();
 const Post = require("../models/Post");
 
 //Create post
-router.post("/", async (req, res) => {
+router.post("/",async (req, res) => {
     try {
         const newPost = new Post(req.body);
         const post = await newPost.save();
@@ -82,6 +82,6 @@ router.get("/", async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
-})
+});
 
 module.exports = router;

@@ -5,13 +5,13 @@ const dotenv = require('dotenv');
 const authRouter = require("./routes/auth");
 const userRouter = require("./routes/users");
 const postRouter = require("./routes/posts");
+const uploadRouter = require("./routes/upload");
 const categoryRouter = require("./routes/categories");
 const cors = require('cors')
 const bodyParser = require('body-parser');
 
 dotenv.config();
-app.use(bodyParser.json({limit: "50mb"}));
-app.use(bodyParser.urlencoded({limit: "50mb", extended: true, parameterLimit:50000}));
+app.use(express.static("images"));
 app.use(express.json());
 app.use(cors());
 
@@ -29,6 +29,7 @@ app.use("/api/auth", authRouter);
 app.use("/api/users", userRouter);
 app.use("/api/posts", postRouter);
 app.use("/api/categories", categoryRouter);
+app.use("/api/upload", uploadRouter)
 
 app.listen(process.env.PORT, () => {
     console.log(`Server is running on port ${process.env.PORT}`);

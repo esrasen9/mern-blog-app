@@ -8,6 +8,7 @@ const DetailedPost = () => {
     const [post, setPost] = useState({});
     const {id} = useParams();
     const {description, postImage, title, username, createdAt} = post;
+    const imgSrc = `http://localhost:5001/${postImage}`
 
     useEffect(() => {
         axios.get(`/posts/${id}`)
@@ -15,7 +16,7 @@ const DetailedPost = () => {
     }, []);
     return (
         <div className="detailed-post">
-            {postImage && <img className="detailed-post-image" src={postImage} alt=""/>}
+            {postImage && <img className="detailed-post-image" src={imgSrc} alt=""/>}
             <DetailedPostHeader username={username} title={title}/>
             <div className="post-sub-title">
                 <Link className="user-posts-link" to={`/?username=${username}`}>

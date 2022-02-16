@@ -15,25 +15,35 @@ const NewPostForm = () => {
         const newPost = {
             username: user?.username,
             title: e.target.title.value,
-            description: e.target.description.value
+            description: e.target.description.value,
         }
-        if (file) {
-            newPost.postImage = file;
+
+        if(file) {
+            const data = new FormData();
+            const name = Date.now() + file.name;
+            data.append("name",name);
+            data.append("file", file);
+            newPost.postImage = name;
+            axios.post("/upload",data)
+                .then((res)=>console.log(res));
         }
-        axios.post("/posts", newPost)
-            .then((res) => navigate(`/posts/${res.data._id}`))
-            .catch((err) => console.error(err));
+
+        axios.post("/posts",newPost)
+            .then((res)=>navigate(`/posts/${res.data._id}`))
+            .catch((err)=> console.error(err));
     }
 
     return (
         <>
             {file && <img className="new-post-image"
-                          src={file} alt=""/>}
+                          src={URL.createObjectURL(file)} alt=""/>}
             <form onSubmit={handleSubmit} className="new-post-form">
                 <div className="new-post-inputs">
                     <input type="text" name="title" placeholder="Enter title here" className="new-post-title"/>
-                    <FileBase64 onDone={({base64}) => setFile(base64)} multiple={false} type="file" id="file"
-                                name="file" className="file-input"/>
+                    <input onChange={(e)=>setFile(e.target.files[0])} type="file" name="file" id="file" className="file-input"/>
+                    <label htmlFor="file">
+                        <MdAddPhotoAlternate className="add-photo-icon" size={60}/>
+                    </label>
                 </div>
                 <p className="new-post-text">
                     <textarea name="description" className="new-post-textarea" placeholder="Write something here..."/>
