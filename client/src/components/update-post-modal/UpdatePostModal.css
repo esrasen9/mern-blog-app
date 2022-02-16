@@ -1,0 +1,40 @@
+.update-form-title {
+    color: teal;
+    margin-bottom: 40px;
+}
+.update-post-form{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.update-post-title {
+    padding: 14px 10px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    outline: none;
+}
+
+.update-post-textarea {
+    margin: 10px 0;
+    flex: 6;
+    outline: none;
+    padding: 14px 10px;
+    border: 1px solid lightgrey;
+}
+
+.update-post-button {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: white;
+    background-color: teal;
+    cursor: pointer;
+    padding: 10px 20px;
+    align-self: flex-end;
+    border: 0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 180px;
+}

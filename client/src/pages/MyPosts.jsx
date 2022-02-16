@@ -10,12 +10,14 @@ const MyPosts = () => {
     const navigate = useNavigate();
     const [myPosts, setMyPosts] = useState([]);
     useEffect(() => {
-        const getPosts = () => {
+        if(user){
             axios.get(`/posts?username=${user.username}`)
                 .then((res) => setMyPosts(res.data))
                 .catch((err) => console.error(err));
         }
-        return user ? getPosts() : navigate("/");
+        else {
+            navigate("/");
+        }
     },[myPosts, user]);
     return (
         <div>

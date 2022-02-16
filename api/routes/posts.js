@@ -17,18 +17,14 @@ router.put("/:id", async (req, res) => {
     try {
         const post = await Post.findById(req.params.id);
         try {
-            if (post.username === req.body.username) {
-                const updatedPost = await Post.findByIdAndUpdate(req.params.id, {$set: req.body}, {new: true})
-                res.status(200).json(updatedPost);
-            } else {
-                res.status(401).json("You can't update this post!");
-            }
+            const updatedPost = await Post.findByIdAndUpdate(req.params.id, {$set: req.body}, {new: true})
+            res.status(200).json(updatedPost);
         } catch (err) {
             res.status(500).json(err);
         }
         res.status(200).json(post);
     } catch (err) {
-        res.status(500).json(err);
+        res.status(404).json("Post not found!");
     }
 });
 
