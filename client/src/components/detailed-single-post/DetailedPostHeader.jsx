@@ -8,7 +8,7 @@ const DetailedPostHeader = ({post}) => {
     return (
         <div className="detailed-post-header">
             <h1 className="detailed-post-title">{title}</h1>
-            {user.username === username && <PostControlButtons id={_id}/>}
+            {user?.username === username && <PostControlButtons id={_id}/>}
         </div>
     );
 }

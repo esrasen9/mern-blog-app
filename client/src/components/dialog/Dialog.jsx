@@ -21,7 +21,7 @@ const Dialog = () => {
     return (
         <div className="dialog-container">
             <div className="dialog-box">
-                <h3>Are you sure?</h3>
+                <h3 className="dialog-message">Are you sure you want to delete this post?</h3>
                 <div className="dialog-buttons">
                     <button onClick={handleDeletePost} className="btn btn-yes">Yes</button>
                     <button onClick={()=>setDialogIsOpen(false)} className="btn btn-no">No</button>
