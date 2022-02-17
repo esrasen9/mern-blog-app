@@ -98,6 +98,22 @@
     margin-left: 10px;
 }
 
+.update-message {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+}
+
+.success {
+    background-color: rgba(0, 128, 128, 0.6);
+}
+
+.error {
+    background-color: rgba(220, 20, 60, 0.7);
+}
+
 @media only screen and (min-width: 1000px) {
     .settings-form {
         max-height: 96vh;

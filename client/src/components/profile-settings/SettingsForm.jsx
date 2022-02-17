@@ -1,12 +1,34 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ProfilePicInput from "./pp-input/ProfilePicInput";
 import SettingInput from "./SettingInput";
+import {useStateValue} from "../../Context";
+import axios from "axios";
 
 const SettingsForm = () => {
+    const {user, setUser, createUpdatedUser} = useStateValue();
+    const [file, setFile] = useState(null);
+    const [success, setSuccess] = useState(false);
+    const [error, setError] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const updatedUser = createUpdatedUser(e, file);
+        axios.put(`/users/${user._id}`, updatedUser)
+            .then((res) => setUser(res.data))
+            .then(() => {
+                setSuccess(true);
+                setError(false);
+            })
+            .catch(() => {
+                setError(true);
+                setSuccess(false);
+            })
+    }
+
     return (
-        <form className="settings-form">
+        <form onSubmit={handleSubmit} className="settings-form">
             <div className="settings-form-left">
-                <ProfilePicInput/>
+                <ProfilePicInput file={file} setFile={setFile}/>
             </div>
             <div className="settings-form-right">
                 <h1>Profile Settings</h1>
@@ -15,6 +37,8 @@ const SettingsForm = () => {
                     <SettingInput inputName="email" type="email"/>
                     <SettingInput inputName="password" type="password"/>
                 </div>
+                {success && <div className="update-message success">Profile updated successfully!</div>}
+                {error && <div className="update-message error">Something went wrong please try again...</div>}
                 <button type="submit" className="update-button">Update Profile</button>
             </div>
         </form>

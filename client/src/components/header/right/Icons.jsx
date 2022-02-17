@@ -5,13 +5,14 @@ import {useStateValue} from "../../../Context";
 import {FiSettings} from "react-icons/fi";
 
 const Icons = () => {
-    const {user, setUser, setProfilePic} = useStateValue();
+
+    const {user, setUser} = useStateValue();
     const navigate = useNavigate();
-    const handleLogout =( ) => {
+    const handleLogout = () => {
         setUser(null);
-        setProfilePic(null);
         navigate("/");
     }
+
     return (
         <div className="icons">
             <button className="search-button">
@@ -24,7 +25,7 @@ const Icons = () => {
                                 <button className="icon-button"><FiSettings size={40}/></button>
                             </Link>
                             <button onClick={handleLogout} className="icon-button "><BiLogOut color={"crimson"}
-                                                                                                     size={50}/></button>
+                                                                                              size={50}/></button>
                         </>
                     )
                     : (<Link className="link" to="/sign"><BiLogIn size={50}/></Link>)
