@@ -1,0 +1,42 @@
+.confirm-box, .delete-action{
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+}
+
+.confirm-input {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 2px solid lightgray;
+}
+
+
+.delete-warn-message h4{
+    background-color: rgba(139, 0, 0, 0.3);
+    color: darkred;
+    padding: 20px 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.delete-button {
+    padding: 10px 20px;
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    background-color: crimson;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.disabled-button {
+    cursor: not-allowed;
+}

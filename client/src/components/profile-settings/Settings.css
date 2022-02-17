@@ -2,6 +2,8 @@
     max-width: 86vw;
     margin: 30px auto;
     box-shadow: rgba(0, 0, 0, 0.2) 0 3px 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 .settings-form {
@@ -84,14 +86,15 @@
     cursor: pointer;
     align-items: center;
     justify-content: center;
-    padding: 10px 30px;
-    margin: 10px 0;
+    padding: 10px 25px;
+    margin: 10px 40px;
     font-size: 1rem;
     font-weight: 600;
     background-color: transparent;
     border-radius: 10px;
     color: crimson;
     border: 1px solid crimson;
+    align-self: flex-end;
 }
 
 .delete-account-icon {

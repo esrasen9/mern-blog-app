@@ -8,10 +8,11 @@ const Provider = ({children}) => {
     const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")) || null)
     const [dialogIsOpen, setDialogIsOpen] = useState(false);
     const [updateModalOpen, setUpdateModalOpen] = useState(false);
+    const [deleteModalOpen, setDeleteModalOpen] = useState(false);
 
     const createUpdatedUser = (e, file) => {
         const updatedUser = {
-            userId: user._id
+            userId: user?._id
         }
         const name = e.target.username.value;
         if (name) updatedUser.username = name;
@@ -43,8 +44,10 @@ const Provider = ({children}) => {
         setDialogIsOpen,
         updateModalOpen,
         setUpdateModalOpen,
+        deleteModalOpen,
+        setDeleteModalOpen,
         createUpdatedUser
-    }), [posts, user, dialogIsOpen, updateModalOpen]);
+    }), [posts, user, dialogIsOpen, updateModalOpen, deleteModalOpen]);
 
 
     useEffect(() => {

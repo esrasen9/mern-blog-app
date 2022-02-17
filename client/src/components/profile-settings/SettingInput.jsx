@@ -6,6 +6,7 @@ const SettingInput = ({inputName, type}) => {
             <label className="setting-label" htmlFor={inputName}>{inputName}</label>
             <input className="setting-input"
                    id={inputName}
+                   name={inputName}
                    type={type}/>
         </div>
     );

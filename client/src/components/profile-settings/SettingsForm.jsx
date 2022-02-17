@@ -5,14 +5,14 @@ import {useStateValue} from "../../Context";
 import axios from "axios";
 
 const SettingsForm = () => {
-    const {user, setUser, createUpdatedUser} = useStateValue();
+    const {user, setUser,createUpdatedUser} = useStateValue();
     const [file, setFile] = useState(null);
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState(false);
 
-    const handleSubmit = (e) => {
+    const handleUpdateProfile = (e) => {
         e.preventDefault();
-        const updatedUser = createUpdatedUser(e, file);
+        const updatedUser = createUpdatedUser(e,file);
         axios.put(`/users/${user._id}`, updatedUser)
             .then((res) => setUser(res.data))
             .then(() => {
@@ -26,7 +26,7 @@ const SettingsForm = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="settings-form">
+        <form onSubmit={handleUpdateProfile} className="settings-form">
             <div className="settings-form-left">
                 <ProfilePicInput file={file} setFile={setFile}/>
             </div>
