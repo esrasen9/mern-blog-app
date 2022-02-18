@@ -10,13 +10,22 @@ function MyPosts() {
   const navigate = useNavigate();
   const [myPosts, setMyPosts] = useState([]);
   useEffect(() => {
-    if (user) {
-      axios.get(`/posts?username=${user.username}`)
-        .then((res) => setMyPosts(res.data))
-        .catch((err) => console.error(err));
-    } else {
-      navigate('/');
-    }
+    let mounted = true;
+    const getPosts = () => {
+      if (user) {
+        axios.get(`/posts?username=${user.username}`)
+          .then((res) => {
+            if (mounted) {
+              setMyPosts(res.data);
+            }
+          })
+          .catch((err) => console.error(err));
+      } else {
+        navigate('/');
+      }
+    };
+    getPosts();
+    return () => { mounted = false; };
   }, [myPosts, user]);
   return (
     <div>
