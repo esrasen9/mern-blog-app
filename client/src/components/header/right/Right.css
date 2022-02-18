@@ -18,13 +18,6 @@
     align-items: center;
 }
 
-.search-button {
-    margin: 0 8px;
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
-}
-
 .icon-button {
     background-color: transparent;
     border: none;

@@ -1,5 +1,5 @@
 import React from 'react';
-import {BiLogIn, BiLogOut, BiSearch} from "react-icons/bi";
+import {BiLogIn, BiLogOut} from "react-icons/bi";
 import {Link, useNavigate} from "react-router-dom";
 import {useStateValue} from "../../../Context";
 import {FiSettings} from "react-icons/fi";
@@ -15,9 +15,6 @@ const Icons = () => {
 
     return (
         <div className="icons">
-            <button className="search-button">
-                <BiSearch size={50}/>
-            </button>
             {
                 user ? (
                         <>
