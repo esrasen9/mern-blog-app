@@ -16,8 +16,8 @@
 .delete-warn-message h4{
     background-color: rgba(139, 0, 0, 0.3);
     color: darkred;
-    padding: 20px 10px;
-    border-radius: 10px;
+    padding: 30px 10px;
+    border-radius: 14px;
     margin-top: 10px;
     font-weight: 500;
     font-size: 1.1rem;
