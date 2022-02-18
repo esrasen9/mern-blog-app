@@ -36,7 +36,7 @@ Create a .env file in the api directory and store the following:
 <code> PORT=5001</code>
 </pre>
 You can obtain the url after create a collection on 
-<a href="https://www.mongodb.com/atlas/database">MongoDB Atlas</a>
+<a target="_blank" href="https://www.mongodb.com/atlas/database">MongoDB Atlas</a>
 </li>
 </ul>
 
