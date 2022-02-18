@@ -15,9 +15,15 @@
     "nodemon": "^2.0.15",
     "path": "^0.12.7"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4"
+  },
   "scripts": {
-    "start": "nodemon index.js --ignore './client'"
+    "start": "nodemon index.js --ignore './client'",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "author": "",
   "license": "ISC"
