@@ -1,4 +1,4 @@
-.confirm-box, .delete-action{
+.confirm-box, .delete-action {
     display: flex;
     flex-direction: column;
     font-weight: 500;
@@ -13,7 +13,7 @@
 }
 
 
-.delete-warn-message h4{
+.delete-warn-message h4 {
     background-color: rgba(139, 0, 0, 0.3);
     color: darkred;
     padding: 30px 10px;

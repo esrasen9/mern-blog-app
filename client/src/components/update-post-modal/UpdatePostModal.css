@@ -2,7 +2,8 @@
     color: teal;
     margin-bottom: 40px;
 }
-.update-post-form{
+
+.update-post-form {
     display: flex;
     flex-direction: column;
     height: 100%;

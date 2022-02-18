@@ -1,14 +1,14 @@
 import React from 'react';
-import DeletePostButton from "./DeletePostButton";
-import UpdatePostButton from "./UpdatePostButton";
+import DeletePostButton from './DeletePostButton';
+import UpdatePostButton from './UpdatePostButton';
 
-const PostControlButtons = ({post}) => {
-    return (
-        <div className="post-control-buttons">
-            <UpdatePostButton post={post} />
-            <DeletePostButton />
-        </div>
-    );
+function PostControlButtons({ post }) {
+  return (
+    <div className="post-control-buttons">
+      <UpdatePostButton post={post} />
+      <DeletePostButton />
+    </div>
+  );
 }
 
 export default PostControlButtons;

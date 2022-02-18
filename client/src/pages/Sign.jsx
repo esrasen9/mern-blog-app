@@ -1,10 +1,10 @@
 import React from 'react';
-import SignContainer from "../components/sign/SignContainer";
+import SignContainer from '../components/sign/SignContainer';
 
-const Sign = () => {
-    return (
-        <SignContainer/>
-    );
+function Sign() {
+  return (
+    <SignContainer />
+  );
 }
 
 export default Sign;

@@ -24,7 +24,7 @@
     margin-bottom: 6px;
 }
 
-.new-post-title,.new-post-categories {
+.new-post-title, .new-post-categories {
     font-size: 1.4rem;
     flex-basis: 96%;
     padding: 10px;
