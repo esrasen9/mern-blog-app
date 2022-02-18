@@ -12,7 +12,7 @@ const style = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: "50vw",
+    width: "60vw",
     height: "700px",
     bgcolor: 'white',
     border: '0',
@@ -38,7 +38,7 @@ const UpdatePostModal = ({post}) => {
         }
         axios.put(path,{title: currentTitle, description: currentDescription})
             .then(()=>setUpdateModalOpen(false))
-            .then(() =>window.location.reload(false))
+            .then(() =>window.location.reload(0))
             .catch((err) => console.log(err));
     }
     return (

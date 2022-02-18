@@ -18,9 +18,11 @@
 .update-post-textarea {
     margin: 10px 0;
     flex: 6;
+    text-align: justify;
     outline: none;
     padding: 14px 10px;
     border: 1px solid lightgrey;
+    width: 100%;
 }
 
 .update-post-button {

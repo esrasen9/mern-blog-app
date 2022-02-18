@@ -2,7 +2,7 @@
     flex-basis: 33%;
     padding: 40px 20px;
     margin: 0 auto;
-    height: 600px;
+    height: 740px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 30px;
     border-radius: 8px;
     line-height: 28px;
@@ -69,13 +69,13 @@
     font-size: 1rem;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
     .post {
         flex-basis: 48%;
     }
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1000px) {
     .post {
         flex-basis: 30%;
     }
