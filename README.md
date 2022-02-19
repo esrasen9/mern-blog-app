@@ -1,12 +1,8 @@
 # MERN Blog App 👩‍💻 🚀
 
-## Demo Website
-<hr>
-
-### 👉🏻
 
 ## Installation ⚡
-<hr>
+
 <ul>
 <li>
 <p>npm</p>
