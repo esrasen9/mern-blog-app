@@ -1,6 +1,6 @@
 # MERN Blog App 👩‍💻 🚀
 
-## Built With
+## Built With 🔨
 <ul>
 <li>
 <a target="_blank" href="https://www.mongodb.com/atlas/database">MongoDB</a>
