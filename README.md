@@ -1,5 +1,26 @@
 # MERN Blog App 👩‍💻 🚀
 
+## Built With
+<ul>
+<li>
+<a target="_blank" href="https://www.mongodb.com/atlas/database">MongoDB</a>
+</li>    
+<li>
+<a target="_blank" href="https://expressjs.com/">Express.js</a>
+</li>   
+<li>
+<a target="_blank" href="https://reactjs.org">React.js</a>
+</li>   
+<li>
+<a target="_blank" href="https://nodejs.org/en/docs/">Node.js</a>
+</li>    
+<li>
+<a target="_blank" href="https://mui.com/getting-started/installation/">Material UI</a>
+</li>  
+<li>
+<a target="_blank" href="https://github.com/expressjs/multer#readme/">Multer</a>
+</li>  
+</ul>
 
 ## Installation ⚡
 
